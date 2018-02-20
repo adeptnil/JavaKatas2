@@ -59,9 +59,42 @@ putInHtml(lotrCitiesArray, 'div11');
 
 
 //#12
+putInHtml(bestThing.slice(0, 14), 'div12');
 
-putInHtml(lotrCitiesArray, 'div12');
 
+//#13
+putInHtml(bestThing.slice(-12), 'div13');
+
+
+//#14
+putInHtml(bestThing.slice(23, 38), 'div14');
+
+
+//#15
+putInHtml(bestThing.substring(69, 82), 'div15');
+
+
+//#16
+putInHtml(bestThing.substring(23, 38), 'div16');
+
+
+//#17
+putInHtml(bestThing.indexOf("only"), 'div17');
+
+
+//#18
+putInHtml(bestThing.indexOf("bit"), 'div18');
+
+
+//#19
+function findVowel(vow){
+    return vow 
+}
+var finVow = gotCitiesCSV.findIndex(citi => "aa","ee","ii","oo","uu" );
+putInHtml(finVow, 'div19');
+
+
+//#20
 
 
     // var senTins = bestThing.split(' ');
