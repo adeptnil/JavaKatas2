@@ -3,7 +3,7 @@ const gotCitiesCSV = "King's Landing,Braavos,Volantis,Old Valyria,Free Cities,Qa
 const lotrCitiesArray = ["Mordor","Gondor","Rohan","Beleriand","Mirkwood","Dead Marshes","Rhun","Harad"];
 const bestThing = "The best thing about a boolean is even if you are wrong you are only off by a bit"
 
-////////////////
+///////////////////////////////////////////////////////////////////
 //HTML Div Installation Function
 function putInHtml(answer, location) {
     let div = document.createElement("div");
@@ -87,14 +87,134 @@ putInHtml(bestThing.indexOf("bit"), 'div18');
 
 
 //#19
-function findVowel(vow){
-    return vow 
+let gotCitiesArray = gotCitiesCSV.split( ",");
+let matchCities = [];
+let vowels = ["aa", "ee", "ii", "oo", "uu"];
+for(var i = 0; i < gotCitiesArray.length; i++){
+    var city = gotCitiesArray[i];
+    for(var t = 0; t < vowels.length; t++){
+        var vow = vowels[t];
+        if(city.includes(vow)) {
+            matchCities.push(city)
+        }
+    }
 }
-var finVow = gotCitiesCSV.findIndex(citi => "aa","ee","ii","oo","uu" );
-putInHtml(finVow, 'div19');
+putInHtml(matchCities, 'div19'); 
 
 
 //#20
+let endCities = [];
+let enders = ["or"];
+for(var i = 0; i < lotrCitiesArray.length; i++){
+    var city = lotrCitiesArray[i];
+    for(var t = 0; t < enders.length; t++){
+        var end = enders[t];
+        if(city.includes(end)) {
+            endCities.push(city)
+        }
+    }
+}
+putInHtml(endCities, 'div20'); 
+
+
+//#21
+let bestThingArray = bestThing.split(" ");
+let besT = [];
+let starT = ["b"];
+for(var i = 0; i < bestThingArray.length; i++){
+    var thin = bestThingArray[i];
+    for(var t = 0; t < starT.length; t++){
+        var beg = starT[t];
+        if(thin.includes(beg)) {
+            besT.push(thin)
+        }
+    }
+}
+putInHtml(besT, 'div21'); 
+
+
+//#22
+let yeahNeah = lotrCitiesArray.includes("Mirkwood");
+    if(yeahNeah == true){
+        x = "Yes";
+    } else {
+        x = "No";
+    }
+putInHtml(x, 'div22');
+
+
+//#23
+let yeahNeahTo = lotrCitiesArray.includes("Holywood");
+    if(yeahNeahTo == true){
+        y = "Yes";
+    } else {
+        y = "No";
+    }
+putInHtml(y, 'div23');
+
+
+//#24
+function getIndMir(element){
+    return element.startsWith("Mirkwood");
+}
+putInHtml(lotrCitiesArray.findIndex(getIndMir), 'div24');
+
+
+//#25
+let spaCer = [];
+let gaps = [" "];
+for(var i = 0; i < lotrCitiesArray.length; i++){
+    var cityy = lotrCitiesArray[i];
+    for(var t = 0; t < gaps.length; t++){
+        var endd = gaps[t];
+        if(cityy.includes(endd)) {
+            spaCer.push(cityy)
+        }
+    }
+}
+putInHtml(spaCer, 'div25'); 
+
+
+//#26
+putInHtml(lotrCitiesArray.reverse(), 'div26');
+
+
+//#27
+putInHtml(lotrCitiesArray.sort(), 'div27');
+
+
+//#28
+function lenCiti(a, b) {
+    if (a.length > b.length) {
+        return 1;
+    }
+    if (a.length < b.length) {
+        return -1;
+    }
+    return 0;
+}
+putInHtml(lotrCitiesArray.sort(lenCiti), 'div28');
+
+
+//#29
+let popAdopa = lotrCitiesArray.pop();
+putInHtml(popAdopa, 'div29');
+
+
+//#30
+let pushAdop = lotrCitiesArray.push("Rohan");
+putInHtml(pushAdop, 'div30');
+
+
+//#31
+let shifty = lotrCitiesArray.shift();
+putInHtml(shifty, 'div31');
+
+
+//#32
+let unShifty = lotrCitiesArray.unshift();
+putInHtml(unShifty, 'div32');
+
 
 
     // var senTins = bestThing.split(' ');
