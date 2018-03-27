@@ -127,6 +127,7 @@ for(var i = 0; i < bestThingArray.length; i++){
         var beg = starT[t];
         if(thin.includes(beg)) {
             besT.push(thin)
+            console.log(besT);
         }
     }
 }
@@ -161,18 +162,25 @@ putInHtml(lotrCitiesArray.findIndex(getIndMir), 'div24');
 
 
 //#25
-let spaCer = [];
-let gaps = [" "];
-for(var i = 0; i < lotrCitiesArray.length; i++){
+for( var i = 0; i < lotrCitiesArray.length; i++){
     var cityy = lotrCitiesArray[i];
-    for(var t = 0; t < gaps.length; t++){
-        var endd = gaps[t];
-        if(cityy.includes(endd)) {
-            spaCer.push(cityy)
-        }
-    }
+    if (cityy.includes(" ")){
+    }  
 }
-putInHtml(spaCer, 'div25'); 
+putInHtml(cityy, 'div25');
+
+// let spaCer = [];
+// let gaps = [" "];
+// for(var i = 0; i < lotrCitiesArray.length; i++){
+//     var cityy = lotrCitiesArray[i];
+//     for(var t = 0; t < gaps.length; t++){
+//         var endd = gaps[t];
+//         if(cityy.includes(endd)) {
+//             spaCer.push(cityy)
+//         }
+//     }
+// }
+// putInHtml(spaCer, 'div25'); 
 
 
 //#26
@@ -202,7 +210,7 @@ putInHtml(popAdopa, 'div29');
 
 
 //#30
-let pushAdop = lotrCitiesArray.push("Rohan");
+let pushAdop = lotrCitiesArray.push(popAdopa);
 putInHtml(pushAdop, 'div30');
 
 
@@ -212,7 +220,7 @@ putInHtml(shifty, 'div31');
 
 
 //#32
-let unShifty = lotrCitiesArray.unshift();
+let unShifty = lotrCitiesArray.unshift(shifty);
 putInHtml(unShifty, 'div32');
 
 
