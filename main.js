@@ -123,14 +123,15 @@ let besT = [];
 let starT = ["b"];
 for(var i = 0; i < bestThingArray.length; i++){
     var thin = bestThingArray[i];
-    for(var t = 0; t < starT.length; t++){
-        var beg = starT[t];
-        if(thin.includes(beg)) {
+    if(thin[0] === "b"){
+     // for(var t = 0; t < starT.length; t++){
+    //     var beg = starT[t];
+        // if(thin.includes(beg)) {
             besT.push(thin)
             console.log(besT);
         }
     }
-}
+
 putInHtml(besT, 'div21'); 
 
 
